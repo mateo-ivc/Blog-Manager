@@ -1,0 +1,18 @@
+{
+  "title": "Filter Coffee",
+  "author": "Mateo Ivankovic",
+  "date": "10. Juli 2002",
+  "teaser": "https://i.pinimg.com/564x/f1/43/2a/f1432a44fca7b9fed2df1b3e45b50b18.jpg",
+  "sections": {
+    "text": {
+      "settings": {
+      },
+      "content": "Das ist ein Text"
+    },
+    "image": {
+      "settings": {
+        "link": "https://standartmag.com/cdn/shop/articles/DSCF7242-min.jpg?v=1685974154&width=1860"
+      }
+    }
+  }
+}
