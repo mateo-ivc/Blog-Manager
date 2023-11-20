@@ -23,12 +23,12 @@
     header {
         background: lightgray;
         color: #fff;
-
+        height: 100px;
         text-align: center;
     }
 
     nav {
-
+        height: inherit;
         display: flex;
         justify-content: space-between;
         align-items: center;

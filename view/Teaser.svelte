@@ -3,7 +3,7 @@
     let story = article.Story
 </script>
 <div class="media">
-    <a href="{story.teaser}">
+    <a href="{story.link}">
         <div class="content">
             <img src="{story.teaser}" width="100%" height="100%" style="object-fit: cover" alt="">
             <div class="description">
