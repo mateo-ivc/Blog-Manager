@@ -1,8 +1,12 @@
 <script>
     import Header from "../Header.svelte";
+    import Text from "./Text.svelte";
 
     export let story
     let post = story.Story
+
+    console.log(post.sections.text)
+
 
 </script>
 
@@ -15,8 +19,6 @@
 <Header/>
 <div class="page-width">
     <div class="media">
-
-
         <div class="media-wrapper">
             <img src="{post.teaser}" width="100%" height="800px" style="object-fit: cover" alt="">
         </div>
@@ -25,8 +27,15 @@
             <a>{post.author} | {post.date}</a>
         </div>
     </div>
-    {#each Object.keys(post.sections) as key (key)}
+    {#each Object.keys(post.sections) as section (section)}
 
+
+        {#if section === "text"}
+            <!-- Todo: Create Component to render Text -->
+
+            <Text bind:section={post.sections[section]}/>
+        {/if}
+        <!--{section}-->
     {/each}
 </div>
 
