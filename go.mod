@@ -2,7 +2,10 @@ module change.me
 
 go 1.19
 
-require github.com/livebud/bud v0.2.8
+require (
+	github.com/iancoleman/orderedmap v0.3.0
+	github.com/livebud/bud v0.2.8
+)
 
 require (
 	github.com/ajg/form v1.5.2-0.20200323032839-9aeb3cf462e1 // indirect

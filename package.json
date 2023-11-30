@@ -3,6 +3,6 @@
   "private": true,
   "dependencies": {
     "livebud": "0.2.8",
-    "svelte": "3.47.0"
+    "svelte": "4.2.8"
   }
 }

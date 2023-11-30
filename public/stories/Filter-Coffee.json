@@ -1,0 +1,25 @@
+{
+  "info": {
+    "title": "Filter Coffee",
+    "author": "Mateo Ivankovic",
+    "date": "10. Juli 2002",
+    "link": "/posts/Filter-Coffee",
+    "teaser": "https://i.pinimg.com/564x/f1/43/2a/f1432a44fca7b9fed2df1b3e45b50b18.jpg"
+  },
+  "layout": {
+    "div": {
+      "@style": "width: 100%; height: 100%",
+      "img": {
+        "@src": "https://i.pinimg.com/564x/f1/43/2a/f1432a44fca7b9fed2df1b3e45b50b18.jpg",
+        "@width": "100%",
+        "@style": "object-fit: cover;",
+        "@alt": ""
+      },
+      "h1": {
+        "@style": "font-size: 12px",
+        "#text": "Das ist ein text"
+      }
+    }
+  }
+}
+

@@ -3,6 +3,7 @@
     import Teaser from "./Teaser.svelte";
 
     export let stories = []
+    console.log(stories.length)
 
 
 </script>

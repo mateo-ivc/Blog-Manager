@@ -1,11 +1,10 @@
 <script>
     import Header from "../Header.svelte";
-    import Text from "./Text.svelte";
+    import Component from "./Component.svelte";
 
     export let story
     let post = story.Story
-
-    console.log(post.sections.text)
+    let info = post.info
 
 
 </script>
@@ -20,44 +19,52 @@
 <div class="page-width">
     <div class="media">
         <div class="media-wrapper">
-            <img src="{post.teaser}" width="100%" height="800px" style="object-fit: cover" alt="">
+            <img src="{info.teaser}" width="100%" style="object-fit: cover" alt="">
         </div>
         <div class="description">
-            <h1>{post.title}</h1>
-            <a>{post.author} | {post.date}</a>
+            <div class="title"><h1>{info.title}</h1></div>
+            <div class="author">
+                <a>Written by</a>
+                <a>{info.author} | {info.date}</a>
+            </div>
         </div>
     </div>
-    {#each Object.keys(post.sections) as section (section)}
+    <hr>
 
 
-        {#if section === "text"}
-            <!-- Todo: Create Component to render Text -->
+    <Component bind:section={post.layout}/>
 
-            <Text bind:section={post.sections[section]}/>
-        {/if}
-        <!--{section}-->
-    {/each}
+
 </div>
 
 <style>
     .media {
-        position: relative;
-        display: flex;
+        margin-bottom: 20px;
     }
 
     .media-wrapper {
         width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .media-wrapper img {
+        height: 75vh;
     }
 
     .description {
-        position: absolute;
-        top: 50%;
-        left: 50%;
+        display: flex;
+        justify-content: space-between;
+    }
 
-        transform: translate(-50%, -50%);
+    .title {
+        align-self: end;
+    }
 
+    .author {
         display: flex;
         flex-direction: column;
-        text-align: center;
+        font-weight: 300;
+        color: rgb(128, 128, 128);
+        text-align: end;
     }
 </style>

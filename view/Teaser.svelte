@@ -1,15 +1,16 @@
 <script>
     export let article;
     let story = article.Story
+    let post = story.info
 </script>
 <div class="media">
-    <a href="{story.link}">
+    <a href="{post.link}">
         <div class="content">
-            <img src="{story.teaser}" width="100%" height="100%" style="object-fit: cover" alt="">
+            <img src="{post.teaser}" width="100%" height="100%" style="object-fit: cover" alt="">
             <div class="description">
                 <div>
-                    <h1>{story.title}</h1>
-                    <a>{story.date} | {story.author}</a>
+                    <h1>{post.title}</h1>
+                    <a>{post.date} | {post.author}</a>
                 </div>
             </div>
         </div>

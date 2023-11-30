@@ -1,7 +1,7 @@
 package controller
 
 import (
-	context "context"
+	"context"
 	"encoding/json"
 	"fmt"
 	"os"
@@ -20,12 +20,14 @@ type Story struct {
 // GET
 func (c *Controller) Index(ctx context.Context) (stories []*Story, err error) {
 	var Stories []*Story
-	files, err := os.ReadDir("public/Stories/")
-
+	files, err := os.ReadDir("public/stories/")
 	for _, file := range files {
-		fileContent, _ := os.ReadFile(fmt.Sprintf("public/Stories/%s", file.Name()))
+		fileContent, _ := os.ReadFile(fmt.Sprintf("public/stories/%s", file.Name()))
 		var result map[string]interface{}
-		json.Unmarshal(fileContent, &result)
+		err := json.Unmarshal(fileContent, &result)
+		if err != nil {
+			return nil, err
+		}
 		Stories = append(Stories, &Story{Story: result})
 	}
 	return Stories, nil
